@@ -7,7 +7,7 @@ class CompileFunc:
         self.num_inputs, graph = func()
         if "show_graph" in kwargs:
             if kwargs["show_graph"]:
-                print(func)
+                func.show()
         self.graph = {}
         self.functions = F
         self.outputs = []

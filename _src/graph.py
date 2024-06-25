@@ -69,7 +69,7 @@ class Graph:
         self.graph.append(trace)
         return [res.tolist(), id]
 
-    def __str__(self):
+    def show(self):
         G = nx.DiGraph()
         for node in self.graph:
             G.add_node(node['id'], label=f"{node['func']} {', '.join([str(const[0]) for const in node['constants']])}")
@@ -79,4 +79,3 @@ class Graph:
         labels = nx.get_node_attributes(G, 'label')
         nx.draw(G, pos, labels=labels, with_labels=True, node_size=2000, node_color='skyblue')
         plt.show()
-        return "Printed Graph"

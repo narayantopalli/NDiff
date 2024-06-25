@@ -12,7 +12,7 @@ def sigmoid(a):
     return F.divide(1, x)
 
 
-compiled_func = ndiff.CompileFunc(sigmoid, show_graph=False)
+compiled_func = ndiff.CompileFunc(sigmoid, show_graph=True)
 inputs_gpu = cp.random.rand(1024, 1)
 inputs_cpu = np.random.rand(1024, 1)
 
